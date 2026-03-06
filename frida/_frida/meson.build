@@ -1,4 +1,5 @@
 py_sources = [
+  '__init__.py',
   '__init__.pyi',
   'py.typed',
 ]
