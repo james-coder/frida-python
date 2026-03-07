@@ -42,11 +42,11 @@ rpc.exports = {
     },
     speak() {
         const buf = Memory.allocUtf8String("Yo");
-        return Memory.readByteArray(buf, 2);
+        return buf.readByteArray(2);
     },
     speakWithMetadata() {
         const buf = Memory.allocUtf8String("Yo");
-        return ['soft', Memory.readByteArray(buf, 2)];
+        return ['soft', buf.readByteArray(2)];
     },
     processData(val, data) {
         return { val, dump: hexdump(data, { header: false }) };

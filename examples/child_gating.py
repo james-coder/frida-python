@@ -48,7 +48,7 @@ Interceptor.attach(Module.getExportByName(null, 'open'), {
   onEnter: function (args) {
     send({
       type: 'open',
-      path: Memory.readUtf8String(args[0])
+      path: args[0].readUtf8String()
     });
   }
 });
